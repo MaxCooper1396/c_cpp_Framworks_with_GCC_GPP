@@ -1,0 +1,53 @@
+Now that GNU gcc/g++ have been installed you need to know how to actually compile.
+
+STEP 1.
+First you must check that your Frameworks are in the appropriate foldeNow . (as this repo is about macs it will use Unix commands):
+
+        $ ls /Library/Frameworks
+
+        iTuneFramwork.framework         mono.framework
+        AssetsLibrary.framework         XamarinIOS.framwork
+        SDL2.framework
+
+(Using this command should return something similar, however the important thing is the framework you are using, in this case SDL2)
+
+STEP 2.
+Now change your directory to where the file/ folder to compile is:
+
+    $ cd Where/Your/File/Is
+
+optionally you can now list to make sure you have the file.
+
+    $ ls
+    theFile.cpp
+
+STEP 3.
+now you must actually compile it (the executable will be stored in same directory):
+
+    $ g++ theFile.cpp -o executable.o -framework SDL2 -F /Library/Frameworks
+
+Lets break it down:
+
+first, we use "g++" to tell the system that we are using the g++ compiler (you can type gcc instead).
+next, we specify the file to compile "theFile.cpp"
+thirdly, we type "-o" to name our executable, we can then name our executable anything but preferably add ".o" to the end.
+next, use "-framework" and then list the framework name "SDL2"
+lastly, to tell the compiler where the .framework file is use the path command "-F" (must be capital) and the folder it is in, "/Library/Frameworks"
+
+STEP 4.
+to call the executable make sure you are still in the right directory:
+
+optionally you can check if it is there:
+
+    $ ls
+    theFile.cpp     executable.o
+
+now use "./" to call an executable:
+
+    $ ./executable.o
+
+DONE 2.
+This will now work as an app or can be called from terminal.
+
+
+If you do not have SDL2 you can go to https://www.libsdl.org/download-2.0.php

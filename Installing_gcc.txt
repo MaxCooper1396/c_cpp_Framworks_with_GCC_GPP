@@ -1,0 +1,19 @@
+Most computers will have the GNU gcc/g++ compiler for c/c++.
+
+STEP 1.
+If you know that you have gcc/g++ you can skip this file, if you are not sure  type this command into terminal:
+
+        $ gcc --version
+                OR
+        $ g++ --version
+
+STEP 2.
+If you do not have gcc/g++ and get a pop-up error along the lines of:
+        
+        "gcc" or "g++ command requires the command line developer tools. Would you like to install them now?"
+
+STEP 3.
+Now accept the prompt to install command line developer tools (Xcode)
+
+DONE 1.
+You now have the compiler installed. Continue to the next txt file.
